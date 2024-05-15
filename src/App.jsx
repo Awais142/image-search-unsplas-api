@@ -16,38 +16,42 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="m-auto">Image Search Using Unsplash API </h1>
-      <form onSubmit={onFormSubmit} className="mb-4">
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search for images..."
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
-          />
-          <div className="input-group-append">
-            <button className="btn btn-primary" type="submit">
-              Search
-            </button>
-          </div>
-        </div>
-      </form>
-      <div className="row">
-        {images.map(({ id, urls, alt_description }) => (
-          <div key={id} className="col-md-4 mb-4">
-            <div className="card">
-              <img
-                src={urls.regular}
-                alt={alt_description}
-                className="card-img-top"
-              />
+    <>
+      <h1 className="m-auto d-flex justify-content-center mt-3">
+        Image Search Using Unsplash API{" "}
+      </h1>
+      <div className="container mt-5">
+        <form onSubmit={onFormSubmit} className="mb-4">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search for images..."
+              value={term}
+              onChange={(e) => setTerm(e.target.value)}
+            />
+            <div className="input-group-append">
+              <button className="btn btn-primary" type="submit">
+                Search
+              </button>
             </div>
           </div>
-        ))}
+        </form>
+        <div className="row">
+          {images.map(({ id, urls, alt_description }) => (
+            <div key={id} className="col-md-4 mb-4">
+              <div className="card">
+                <img
+                  src={urls.regular}
+                  alt={alt_description}
+                  className="card-img-top"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
