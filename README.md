@@ -20,21 +20,25 @@ A modern image search application built with React.js that leverages the Unsplas
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone [your-repo-link]
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create a `.env` file and add your Unsplash API key:
+
 ```
 VITE_UNSPLASH_API_KEY=your_api_key_here
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -49,7 +53,7 @@ npm run dev
 
 ## 🌐 Live Demo
 
-[Add your deployed project link here]
+image-search-unsplash-api.vercel.app/
 
 ## 📝 License
 
